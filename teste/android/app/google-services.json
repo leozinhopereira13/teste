@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "266667381017",
+    "firebase_url": "https://buspay-37d26.firebaseio.com",
+    "project_id": "buspay-37d26",
+    "storage_bucket": "buspay-37d26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266667381017:android:29957ae2542cecd9",
+        "android_client_info": {
+          "package_name": "br.com.stief.buspay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266667381017-e1cqdogvrpnq3n1rt0g0qneu60hahb9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-EdBh4OMlrcMfoTLjEMPdYvjRr3kQIho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266667381017-e1cqdogvrpnq3n1rt0g0qneu60hahb9o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266667381017:android:f2f81ad7fa92099f",
+        "android_client_info": {
+          "package_name": "com.example.teste"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266667381017-e1cqdogvrpnq3n1rt0g0qneu60hahb9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-EdBh4OMlrcMfoTLjEMPdYvjRr3kQIho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266667381017-e1cqdogvrpnq3n1rt0g0qneu60hahb9o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
