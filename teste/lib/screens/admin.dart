@@ -1,7 +1,6 @@
-import 'package:buspay/models/user_models.dart';
-import 'package:buspay/screens/home.dart';
+import 'package:flutter_app/tabs/admin_tab.dart';
+import 'package:flutter_app/widgets/drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:scoped_model/scoped_model.dart';
 
 
 class Admin extends StatefulWidget {
@@ -10,77 +9,90 @@ class Admin extends StatefulWidget {
 }
 
 class _AdminState extends State<Admin> {
+
+  final _pageController = PageController();
   @override
   Widget build(BuildContext context) {
-    return ScopedModelDescendant<UserModel>(
-      builder: (context,child,model){
-        return Scaffold(
+     return PageView(
+      controller: _pageController,
+      physics: NeverScrollableScrollPhysics(),
+      children: <Widget>[
+        //Home
+        Scaffold(
           appBar: AppBar(
-            title: Text("Área do Usuário"),
+
+            title: Text("Admin"),
             centerTitle: true,
-            backgroundColor: Colors.lightBlue,
-            actions: <Widget>[
-
-            ],
-
           ),
-          drawer: Drawer(
+          body:HomeTab(),
 
-              child: ListView(
-                children: <Widget>[
-                  UserAccountsDrawerHeader(
-                    currentAccountPicture: CircleAvatar(
-                      backgroundColor: Colors.grey[500],
-                      radius: 30.0,
-                      child: Icon(
-                        Icons.person,
-                        size: 60.0,
-                        color: Colors.white,
-                      ),
-                    ) ,
-                    accountName:  Text("${!model.isLoggedIn() ? "" : model.userData["name"]} "),
-                    accountEmail: Text("${!model.isLoggedIn() ? "" : model.userData["email"]} "),
+          drawer: CustomDrawer(_pageController),
 
-                  ),
-                  InkWell(
-                    onTap: () async{
-
-                      model.signOut();
-
-                        Navigator.of(context).pop();
-                        Navigator.of(context).pop();
+        ),
+        //Categorias
 
 
-                    },
-                    child: Container(
-                      height: 60.0,
-                      child: Row(
-                        children: <Widget>[
-                          Icon(
-                            Icons.exit_to_app,
-                            size: 32.0,
+        Scaffold(
+            appBar: AppBar(
 
-                          ),
-                          SizedBox(width: 32.0,),
-                          Text(
-                              "Logout",
-                              style: TextStyle(
-                                fontSize: 16.0,
+              title: Text("Histórico"),
+              centerTitle: true,
+            ),
+            drawer: CustomDrawer(_pageController),
 
-                              )
-                          )
-                        ],
-                      ),
-                    ),
-                  )
 
-                ],
-              ),
 
+
+        ),
+
+
+        Scaffold(
+          appBar: AppBar(
+            title: Text("Formas de Pagamento"),
+            centerTitle: true,
           ),
-          body: Container(),
-        );
-      },
+
+          drawer: CustomDrawer(_pageController),
+        ),
+
+
+
+        Scaffold(
+          appBar: AppBar(
+            title: Text("Meus Pedidos"),
+            centerTitle: true,
+          ),
+
+          drawer: CustomDrawer(_pageController),
+        ),
+
+        Scaffold(
+          appBar: AppBar(
+            title: Text("Meus Dados"),
+            centerTitle: true,
+          ),
+
+          drawer: CustomDrawer(_pageController),
+        ),
+
+        Scaffold(
+          appBar: AppBar(
+            title: Text("Ajuda"),
+            centerTitle: true,
+          ),
+
+          drawer: CustomDrawer(_pageController),
+        ),
+
+        Scaffold(
+          appBar: AppBar(
+            title: Text("Sair"),
+            centerTitle: true,
+          ),
+
+          drawer: CustomDrawer(_pageController),
+        ),
+      ],
     );
   }
 

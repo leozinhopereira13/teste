@@ -1,9 +1,8 @@
 
-import 'package:buspay/screens/home.dart';
-import 'package:buspay/screens/login.dart';
+import 'package:flutter_app/screens/home.dart';
 import 'package:flutter/material.dart';
 
-import 'package:buspay/models/user_models.dart';
+import 'package:flutter_app/models/user_models.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 

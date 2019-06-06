@@ -1,5 +1,5 @@
-import 'package:buspay/models/user_models.dart';
-import 'package:buspay/screens/admin.dart';
+import 'package:flutter_app/models/user_models.dart';
+import 'package:flutter_app/screens/admin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:scoped_model/scoped_model.dart';

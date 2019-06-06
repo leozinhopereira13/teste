@@ -1,9 +1,11 @@
-import 'package:buspay/models/user_models.dart';
-import 'package:buspay/screens/admin.dart';
-import 'package:buspay/screens/login.dart';
+import 'package:flutter_app/models/user_models.dart';
+import 'package:flutter_app/screens/admin.dart';
+import 'package:flutter_app/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
+import 'package:flare_flutter/flare_actor.dart';
 class Home extends StatelessWidget {
+	
   @override
   Widget build(BuildContext context) {
 
@@ -16,7 +18,22 @@ class Home extends StatelessWidget {
               builder: (context,child,model){
                 return Column(
                   children: <Widget>[
-                    Row(
+		   Container( height: 400,width:500, color: Colors.blue,
+		    	child:Column(children: <Widget>[
+				Container(height: 50),
+				Container(height: 100,width:100,
+				child: FlareActor("animacao/bus.flr",animation:"bus",),
+				),
+			Container(height: 20),
+			Container(height: 5),
+			Text("BUS PAY",style: TextStyle(fontSize: 40.0,fontWeight: FontWeight.bold, fontFamily:"Times",color: Colors.white,)),
+			Container(height: 10),
+			Text("Pague facil. Pague com o celular",style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold,fontFamily:"Times", color: Colors.white,)),
+			],
+			
+			),
+			),
+                    /*Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Expanded(
@@ -24,10 +41,13 @@ class Home extends StatelessWidget {
 
                           ),
                         ),
-
+			Container(width:100 , height: 100,
+			child: FlareActor("animacao/bus.flr",animation:"bus",) ,			
+			),
+			
                       ],
 
-                    ),
+                    ),*/
                     SizedBox(
                       height: 16.0,
                     ),
